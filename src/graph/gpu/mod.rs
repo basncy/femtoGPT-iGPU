@@ -116,7 +116,7 @@ pub struct GpuGraph {
 
 impl GpuGraph {
     pub fn new() -> Result<Self, GraphError> {
-        let device = Device::by_brand(Brand::Nvidia)?[0].clone();
+        let device = Device::by_brand(Brand::Intel)?[0].clone();
         Ok(Self {
             device,
             tensors: Default::default(),

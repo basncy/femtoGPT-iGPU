@@ -2,6 +2,7 @@
 pub enum Brand {
     Amd,
     Nvidia,
+    Intel,
 }
 
 impl Brand {
@@ -9,6 +10,7 @@ impl Brand {
         match self {
             Brand::Nvidia => "NVIDIA CUDA",
             Brand::Amd => "AMD Accelerated Parallel Processing",
+            Brand::Intel => "Intel(R) OpenCL Graphics",
         }
     }
 
@@ -19,6 +21,7 @@ impl Brand {
                 let result = d.info_raw(CL_DEVICE_PCI_BUS_ID_NV)?;
                 Ok(u32::from_le_bytes(result[..].try_into().unwrap()))
             }
+            Brand::Intel => Ok(0),
             Brand::Amd => panic!("Not supported!"),
         }
     }
