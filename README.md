@@ -1,8 +1,6 @@
-# :robot: femtoGPT
+# :robot: femtoGPT-iGPU
 
-![crates.io](https://img.shields.io/crates/v/femto-gpt.svg)
-![GitHub top language](https://img.shields.io/github/languages/top/keyvank/femtoGPT)
-![GitHub](https://img.shields.io/github/license/keyvank/femtoGPT)
+This is a fork from [femtoGPT](https://github.com/keyvank/femtoGPT), which supports running on Intel iGPU, allowing almost everyone to learn LLM from scratch at a lower hardware cost.
 
 femtoGPT is a pure Rust implementation of a minimal Generative Pretrained Transformer.
 
